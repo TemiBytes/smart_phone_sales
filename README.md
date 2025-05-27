@@ -1,5 +1,8 @@
 ## SMART PHONE SALES
 
+![Smart Phones Sales Dashboard](https://drive.google.com/uc?export=view&id=1JutkGsPcb16l1JbQxUC-vt6FRVrFvPXS)
+
+
 ## PROJECT OVERVIEW
 
 This Power BI project presents a comprehensive analysis of smartphone sales across different regions and brands. The goal was to explore trends, evaluate performance across markets, and help stakeholders make data-driven business decisions using interactive visualizations.
@@ -106,29 +109,29 @@ RETURN
 
 - Same logic is applied to MOM Revenue, MOM Transaction, MOM unique product sold, MOM units sold
 - Color = 
-SWITCH(SELECTEDVALUE('Model Color'[Model Color Order]),
+`SWITCH(SELECTEDVALUE('Model Color'[Model Color Order]),
     0, "Black",
     1, "#094780",
     2, "#48bd7b",
     3, "White",
     4, "Red",
     "grey"
-)
+)`
 
 **ADDING NEW PARAMETERS**
-- Model Color = {
+- `Model Color = {
     ("B", NAMEOF('Dim_Model_Image'[Black Url]), 0),
     ("B", NAMEOF('Dim_Model_Image'[Blue Url]), 1),
     ("G", NAMEOF('Dim_Model_Image'[Green Url]), 2),
     ("W", NAMEOF('Dim_Model_Image'[White Url]), 3),
     ("R", NAMEOF('Dim_Model_Image'[Red Url]), 4)
-}
+}`
 
-KPIs = {
+`KPIs = {
     ("Total Transactions", NAMEOF('Calculations'[Total Transactions]), 0),
     ("Revenue Generated", NAMEOF('Calculations'[Revenue Generated]), 1),
     ("Units Sold", NAMEOF('Calculations'[Units Sold]), 2)
-}
+}`
 
 ## SUMMARY INSIGHTS
 - Apple phones fall under the category of premium leaders in the smartphone market
