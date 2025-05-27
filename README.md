@@ -74,7 +74,7 @@ Sales by Region
 - Units Sold = SUM(Fact_Sales[Units Sold])
 
 **MOM**
-- MoM Average Price = 
+- `MoM Average Price = 
 VAR CurrentDate = MAX('Dim Calendar'[Date])
 VAR PrevMonthName = 
     CALCULATE(
@@ -102,7 +102,7 @@ RETURN
                 "↓ " & "-" &""&FORMAT(ABS(MoMChange), "0.0%") & " Vs " & PrevMonthName
             ),
             "No Selection or Data"
-        )
+        )`
 
 - Same logic is applied to MOM Revenue, MOM Transaction, MOM unique product sold, MOM units sold
 - Color = 
